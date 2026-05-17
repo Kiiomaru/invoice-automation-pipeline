@@ -25,7 +25,7 @@ This project automates the process of reading invoice data from spreadsheets, va
 
 ## 📂 Project Structure
 ```text
-invoice-automation/
+invoice-automation-pipeline/
 │
 ├── data/
 │   └── NotasEmitir.xlsx
@@ -81,8 +81,8 @@ Create a .env file in the project root:
 `LOGIN_PASS=your_password`
 
 ## 📥 Installation
-1. Clone the repository: `git clone <repository_url>`
-2. Access folder: `cd invoice-automation`
+1. Clone the repository: `git clone https://github.com/Kiiomaru/invoice-automation-pipeline.git`
+2. Access folder: `cd invoice-automation-pipeline`
 3. Create venv: `python -m venv venv`
 4. Activate (Windows): `.\venv\Scripts\activate`
 5. Install: `pip install -r requirements.txt`
