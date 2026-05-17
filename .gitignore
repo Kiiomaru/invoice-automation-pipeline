@@ -1,0 +1,26 @@
+# Ambiente Virtual (NUNCA subir a pasta venv)
+venv/
+.venv/
+env/
+bin/
+lib/
+share/
+
+# Configurações sensíveis (Suas senhas do .env)
+.env
+
+# Cache do Python (Arquivos gerados automaticamente)
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Dados e Resultados (Opcional, mas recomendado para proteger dados reais)
+data/NotasEmitir.xlsx
+output/
+
+# VS Code
+.vscode/
+
+# Excel temporário (Arquivos criados pelo Excel enquanto está aberto)
+~$*.xlsx
