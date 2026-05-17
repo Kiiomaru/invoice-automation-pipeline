@@ -90,7 +90,7 @@ Create a .env file in the project root:
 ## 🚀 Running the Project
 Run from root: `python -m src.main`
 
-<img width="1419" height="314" alt="Captura de tela 2026-05-17 010358" src="https://github.com/user-attachments/assets/aeee0685-c54e-47c6-9e51-359c58affd53" />
+<img width="1000" height="200" alt="Captura de tela 2026-05-17 010358" src="https://github.com/user-attachments/assets/aeee0685-c54e-47c6-9e51-359c58affd53" />
 
 ## 📊 Output
 The automation automatically generates:
