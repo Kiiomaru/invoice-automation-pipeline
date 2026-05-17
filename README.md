@@ -54,7 +54,7 @@ invoice-automation-pipeline/
 ├── requirements.txt
 └── README.md
 ```
-![Code Architecture](assets/main.png)
+![Code Architecture](<img src="assets/main.png" height="300" alt="Code Architecture">)
 
 ## ⚙️ Automation Flow
 1. Load spreadsheet data
