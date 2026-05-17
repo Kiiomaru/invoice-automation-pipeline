@@ -5,7 +5,7 @@ Python-based automation pipeline designed to optimize invoice processing workflo
 This project automates the process of reading invoice data from spreadsheets, validating business rules, interacting with a web system, and generating reports for invalid records.
 
 ## 🚀 Features
-* Automated invoice issuance using Selenium
+* Automated invoice processing workflow using Selenium
 * Spreadsheet processing with Pandas
 * Data validation and sanitization
 * Headless browser execution
