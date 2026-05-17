@@ -1,6 +1,6 @@
 # 📑 Invoice Automation Pipeline
 
-Automated invoice issuance pipeline built with Python, Selenium and Pandas.
+Python-based automation pipeline designed to optimize invoice processing workflows through automated validation, browser interaction and structured data handling.
 
 This project automates the process of reading invoice data from spreadsheets, validating business rules, interacting with a web system, and generating reports for invalid records.
 
@@ -14,6 +14,13 @@ This project automates the process of reading invoice data from spreadsheets, va
 * Modular project architecture
 * Environment variable management with .env
 * Automatic generation of output reports
+
+## 🏢 Business Impact
+* Reduced repetitive manual tasks
+* Improved invoice validation consistency
+* Increased operational efficiency
+* Automated spreadsheet-based workflows
+* Minimized manual data entry errors
 
 ## 🛠️ Technologies Used
 * Python
@@ -62,7 +69,7 @@ invoice-automation-pipeline/
 3. Clean and sanitize invoice information
 4. Start headless browser
 5. Perform system login
-6. Issue invoices automatically
+6. Execute automated invoice processing workflow
 7. Handle processing errors without interrupting execution
 8. Export invalid records report
 9. Close browser session safely
@@ -123,7 +130,14 @@ The automation automatically generates:
 * webdriver-manager
 
 ## 👨‍💻 Author
-**Matheus Giuliano**
-Python Automation Developer focused on process automation, data processing and operational efficiency
-GitHub: Kiiomaru
-Focus Areas: Python Automation, Data Processing, ETL, Selenium, Pandas, SQL
+Matheus Giuliano  
+Python Automation Developer focused on workflow automation, data processing and operational efficiency.
+
+### 🧠 Focus Areas
+- Python Automation
+- Workflow Automation
+- ETL Pipelines
+- Selenium
+- Pandas
+- SQL
+- Process Optimization
