@@ -95,6 +95,11 @@ invoice-automation/
 
 ---
 
+# Project Architecture
+The repository follows a modular architecture based on Python best practices, ensuring maintainability and scalability.
+![Project Structure](assets/estrutura_projeto.png)
+
+---
 # Business Impact
 
 This project was designed to simulate a real-world operational automation scenario where manual invoice issuance can generate repetitive workload, operational bottlenecks and high risk of human error.
@@ -180,6 +185,19 @@ To improve operational reliability, the automation includes:
 - Execution continuity after failures
 - Automatic re-login after processing errors
 - Consolidated reporting for failed executions
+
+---
+
+# Execution Summary (Terminal)
+At the end of each run, the robot provides a detailed statistical summary in the console, allowing for a quick audit of the operation's health.
+![Execution Summary](assets/resumo_execucao_terminal.png)
+
+# Traceability & Reporting
+Unlike basic automation scripts, this system prioritizes **exception management**. If a data point fails during the web process, the exact reason is logged in a consolidated Excel file for later manual correction.
+
+| Visual Evidence (Screenshot) | Error Report (Excel) |
+| :---: | :---: |
+| ![Error Evidence](assets/evidencia_erro_campo.png) | ![Error Table](assets/relatorio_final_erros.png) |
 
 ---
 
@@ -309,4 +327,15 @@ Python Developer focused on automation, ETL workflows and data-driven process op
 # License
 
 This project is for educational and portfolio purposes.
+
+---
+
+# 🚀 Demonstration & Results
+
+The project was validated with a batch of **200 entries**, achieving 100% traceability across both successful and failed execution paths.
+
+
+
+
+
 
