@@ -188,24 +188,20 @@ To improve operational reliability, the automation includes:
 
 ---
 
-# 🚀 Demonstration & Results
+#  Demonstration & Results
 
 The project was validated with a batch of **200 entries**, achieving 100% stability and traceability across both successful and failed execution paths.
 
-### 📊 Execution Summary (Terminal)
+# Execution Summary (Terminal)
 At the end of each run, the robot provides a detailed statistical summary in the console, allowing for a quick audit of the operation's health.
 ![Execution Summary](assets/resumo_execucao_terminal.png)
 
-### 📁 Traceability & Reporting
+# Traceability & Reporting
 Unlike basic automation scripts, this system prioritizes **exception management**. If a data point fails during the web process, the exact reason is logged in a consolidated Excel file for later manual correction.
 
 | Visual Evidence (Screenshot) | Error Report (Excel) |
 | :---: | :---: |
 | ![Error Evidence](assets/evidencia_erro_campo.png) | ![Error Table](assets/relatorio_final_erros.png) |
-
-### 🛠️ Workspace & Project Structure
-The repository follows a modular architecture based on Python best practices, ensuring maintainability and a clean development environment.
-![Project Structure](assets/estrutura_projeto.png)
 
 ---
 
