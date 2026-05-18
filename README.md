@@ -1,143 +1,312 @@
-# 📑 Invoice Automation Pipeline
+# Invoice Automation
 
-Python-based automation pipeline designed to optimize invoice processing workflows through automated validation, browser interaction and structured data handling.
+Automação de emissão de notas fiscais desenvolvida com Python, Selenium e Pandas, focada em reduzir processos manuais, aumentar confiabilidade operacional e garantir rastreabilidade durante execuções automatizadas.
 
-This project automates the process of reading invoice data from spreadsheets, validating business rules, interacting with a web system, and generating reports for invalid records.
+O projeto realiza leitura de planilhas Excel, validação e tratamento de dados, preenchimento automatizado de formulários web, captura de erros operacionais e geração de relatórios consolidados para auditoria.
 
-## 🚀 Features
-* Automated invoice processing workflow using Selenium
-* Spreadsheet processing with Pandas
-* Data validation and sanitization
-* Headless browser execution
-* Automatic handling of invalid records
-* Error recovery during automation flow
-* Modular project architecture
-* Environment variable management with .env
-* Automatic generation of output reports
+---
 
-## 🏢 Business Impact
-* Reduced repetitive manual tasks
-* Improved invoice validation consistency
-* Increased operational efficiency
-* Automated spreadsheet-based workflows
-* Minimized manual data entry errors
+# Features
 
-## 🛠️ Technologies Used
-* Python
-* Selenium
-* Pandas
-* OpenPyXL
-* WebDriver Manager
-* Python Dotenv
+- Automated invoice issuance using Selenium
+- Spreadsheet data validation with Pandas
+- Structured logging system
+- Screenshot capture for failed executions
+- Automated error recovery workflow
+- Invalid data filtering and reporting
+- Environment variable configuration with `.env`
+- Automated folder cleanup before execution
+- Consolidated execution report generation
+- Batch processing workflow
 
-## 📂 Project Structure
+---
+
+# Tech Stack
+
+## Core Technologies
+
+- Python
+- Selenium
+- Pandas
+- WebDriver Manager
+- Logging
+- Dotenv
+- OpenPyXL
+
+## Automation & Data Concepts
+
+- Process Automation
+- ETL Workflow
+- Data Validation
+- Batch Processing
+- Error Handling
+- Operational Logging
+- Data Cleaning
+- Workflow Resilience
+- Automated Reporting
+- Environment Variable Management
+
+## Software Engineering Practices
+
+- Modular Architecture
+- Separation of Responsibilities
+- Structured Logging
+- Reusable Components
+- Failure Recovery Strategy
+- File System Management
+
+---
+
+# Project Structure
+
 ```text
-invoice-automation-pipeline/
+invoice-automation/
 │
 ├── data/
 │   └── NotasEmitir.xlsx
 │
+├── downloads_nfs/
+│
+├── logs/
+│   └── execucao.log
+│
 ├── output/
-│   └── clientes_erro_cadastro.xlsx
+│   └── relatorio_final.xlsx
+│
+├── screenshots/
 │
 ├── web/
 │   └── login.html
 │
 ├── src/
-│   ├── __init__.py
 │   ├── main.py
 │   │
-│   ├── core/
-│   │   ├── __init__.py
-│   │   ├── navegador.py
-│   │   └── excel.py
+│   ├── bot/
+│   │   └── acoes.py
 │   │
-│   └── bot/
-│       ├── __init__.py
-│       └── acoes.py
+│   └── core/
+│       ├── navegador.py
+│       └── excel.py
 │
 ├── .env
-├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
-<img src="assets/main.png" height="600" alt="Code Architecture">
 
-## ⚙️ Automation Flow
-1. Load spreadsheet data
-2. Validate required fields
-3. Clean and sanitize invoice information
-4. Start headless browser
-5. Perform system login
-6. Execute automated invoice processing workflow
-7. Handle processing errors without interrupting execution
-8. Export invalid records report
-9. Close browser session safely
+---
 
-## 🔍 Data Validation Rules
-The automation validates:
-* Empty required fields
-* Invalid CPF/CNPJ length
-* Invalid CEP length
-* Invalid invoice values
-* Client names containing numbers
-Invalid records are automatically separated and exported into an Excel report.
+# Business Impact
 
-## 🔑 Environment Variables
-Create a .env file in the project root:
-`LOGIN_USER=your_login`
-`LOGIN_PASS=your_password`
+This project was designed to simulate a real-world operational automation scenario where manual invoice issuance can generate repetitive workload, operational bottlenecks and high risk of human error.
 
-## 📥 Installation
-1. Clone the repository: `git clone https://github.com/Kiiomaru/invoice-automation-pipeline.git`
-2. Access folder: `cd invoice-automation-pipeline`
-3. Create venv: `python -m venv venv`
-4. Activate (Windows): `.\venv\Scripts\activate`
-5. Install: `pip install -r requirements.txt`
+The automation helps optimize business operations by:
 
-## 🚀 Running the Project
-Run from root: `python -m src.main`
+- Reducing repetitive manual tasks
+- Increasing execution consistency
+- Improving operational traceability
+- Minimizing invoice processing errors
+- Accelerating batch invoice generation
+- Improving failure monitoring through logs and screenshots
+- Creating standardized execution reports
+- Allowing scalable processing workflows
 
-| System Interaction | Terminal Logs |
-|:---:|:---:|
-| ![Bot](assets/BOT_funcionando.png) | ![Terminal](assets/log_final.png) |
+The workflow was structured with reliability and operational continuity in mind, including automatic error recovery and execution persistence.
 
-## 📊 Output
-The automation automatically generates:
-* Downloaded invoice files
-* Invalid records report
-* Process execution logs in terminal
+---
 
-| Invalid Records (Excel) | Generated Invoices (XML) |
-|:---:|:---:|
-| ![Exclusion Report](assets/dados_excluidos.png) | ![XML Files](assets/notas.png) |
+# Workflow
 
-## 🧠 Main Technical Concepts
-* Web Automation
-* ETL Concepts
-* Data Validation
-* Error Handling
-* Modular Architecture
-* Environment Management
-* File System Management
-* Resilient Automation Flow
+```text
+Excel Input
+    ↓
+Data Validation & Cleaning
+    ↓
+Automated Login
+    ↓
+Invoice Form Filling
+    ↓
+Error Handling & Recovery
+    ↓
+Logging & Screenshot Capture
+    ↓
+Final Consolidated Report
+```
 
-## 📦 Dependencies
-* pandas
-* selenium
-* openpyxl
-* python-dotenv
-* webdriver-manager
+---
 
-## 👨‍💻 Author
-Matheus Giuliano  
-Python Automation Developer focused on workflow automation, data processing and operational efficiency.
+# Data Validation
 
-### 🧠 Focus Areas
-- Python Automation
+The automation validates critical information before processing invoices.
+
+Examples:
+
+- Empty customer names
+- Invalid CPF/CNPJ length
+- Invalid ZIP code length
+- Invalid total values
+- Missing required fields
+
+Invalid records are automatically separated and exported to a consolidated error report.
+
+---
+
+# Logging System
+
+The project uses Python's `logging` module to provide execution traceability.
+
+Examples of monitored events:
+
+- Successful invoice issuance
+- Processing errors
+- Execution summary
+- Error report generation
+- Browser lifecycle
+- Automation start and finish
+
+Log file:
+
+```text
+logs/execucao.log
+```
+
+---
+
+# Error Handling
+
+To improve operational reliability, the automation includes:
+
+- Try/Except workflow
+- Automatic screenshot capture
+- Execution continuity after failures
+- Automatic re-login after processing errors
+- Consolidated reporting for failed executions
+
+---
+
+# Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+LOGIN_USER=your_login
+LOGIN_PASS=your_password
+```
+
+---
+
+# Dependencies
+
+Main project dependencies:
+
+```txt
+selenium
+pandas
+python-dotenv
+webdriver-manager
+openpyxl
+```
+
+Example `requirements.txt`:
+
+```txt
+selenium==4.32.0
+pandas==2.2.3
+python-dotenv==1.1.0
+webdriver-manager==4.0.2
+openpyxl==3.1.5
+```
+
+---
+
+# Installation
+
+## Clone repository
+
+```bash
+git clone <repository-url>
+```
+
+## Access project folder
+
+```bash
+cd invoice-automation
+```
+
+## Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Run Project
+
+```bash
+python src/main.py
+```
+
+---
+
+# Execution Outputs
+
+During execution, the automation generates:
+
+## Logs
+
+```text
+logs/execucao.log
+```
+
+## Screenshots
+
+```text
+screenshots/
+```
+
+## Consolidated Error Report
+
+```text
+output/relatorio_final.xlsx
+```
+
+---
+
+# Technical Highlights
+
+This project was designed to simulate a real operational automation workflow.
+
+Main focuses:
+
+- Operational reliability
+- Error traceability
+- Batch processing
+- Automated validation
+- Failure resilience
+- Reusable architecture
+- Organized project structure
+
+---
+
+# Author
+
+Matheus Giuliano
+
+Python Developer focused on automation, ETL workflows and data-driven process optimization.
+
+- SQL
+- Pandas
+- Data Processing
+- Business Intelligence
 - Workflow Automation
+- Python Automation
+- Process Optimization
 - ETL Pipelines
 - Selenium
-- Pandas
-- SQL
-- Process Optimization
+
+---
+
+# License
+
+This project is for educational and portfolio purposes.
+
